@@ -1,0 +1,18 @@
+.actions-section {
+    margin-left: -15px;
+    margin-right: -15px;
+    background-color: $primary-gray;
+    background-image: url(../img/background-gray.png);
+    background-size: 100% 100%;
+    color: #fff;
+    font-size: 1.4rem;
+    font-family: Intro-Book, sans-serif;
+    text-align: center;
+    img {
+        max-width: 100px;
+        margin-bottom: 15px;
+    }
+    .btn {
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,60 @@
+footer.main-footer {
+    background-color: $primary-gray;
+    background-image: url(../img/background-red.png);
+    background-size: 100% 100%;
+    margin-left: -15px;
+    margin-right: -15px;
+    overflow: hidden;
+    padding-top: 3rem;
+    color: #fff;
+    h4{
+        font-family: GothamProLight, sans-serif;
+    }
+    &>div {
+        text-align: center;
+    }
+    svg {
+        max-width: 50px;
+        margin-bottom: 15px;
+        height: 50px;
+        fill: #fff;
+    }
+
+    @media screen and (max-width: 786px) {
+        .contact-us {
+            flex-direction: column;
+            &>div {
+                justify-content: center;
+                flex-direction: row;
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    .copy {
+        margin-top: 2rem;
+        background: rgba($primary-gray, .5);
+        padding: 5px;
+        padding-top: 15px;
+        svg {
+            margin: 5px;
+            max-width: 25px;
+            max-height: 25px;
+            fill: #fff;   
+        }
+        .permanent {
+            svg {
+                &:hover {
+                    fill: $primary-red;
+                }
+            }
+        }
+        .tatoo {
+            svg {
+                &:hover {
+                    fill: #000;
+                }
+            }
+        }
+    }
+}

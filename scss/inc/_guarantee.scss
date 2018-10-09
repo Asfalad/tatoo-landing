@@ -1,0 +1,56 @@
+@import 'variables';
+.guarantee-section {
+    background: url(../img/background-red.png);
+    background-size: cover;
+    padding: 0;
+    margin: 0 -15px;
+    z-index: 30;
+    margin-top: -2.5rem;
+    padding: 4rem 2rem;
+    .header {
+        margin-top: 15px;
+        span.rect:before {
+            content: ' ';
+            position: absolute;
+            z-index: 0;
+            left: 3rem;
+            top: 0;
+            border: 30px solid #000;
+        }
+        h2 {
+            margin-left: 4rem;
+            margin-bottom: 2rem;;
+            text-transform: uppercase;
+            font-size: 1.55rem;
+            font-family: Intro-Bold, sans-serif;
+            position: relative;
+            z-index: 10;
+            color: #fff;
+        }
+        &.mix-blend-mode {
+            span.rect:before{
+                border: 30px solid #000 !important;
+            }
+            h2 {
+                -webkit-mix-blend-mode: difference !important;
+                mix-blend-mode: difference !important;
+                color: #fff !important;
+            }
+        }
+    }
+    .description {
+        margin-top: 4rem;
+        padding: 0 2rem;
+        color: #fff;
+        p{ 
+            font-family: GothamProRegular;
+        }
+        svg {
+            path{
+                fill: #fff;
+            }
+            max-width: 50px;
+            margin-bottom: 2rem;
+        }
+    }
+}

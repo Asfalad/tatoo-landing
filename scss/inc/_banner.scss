@@ -1,0 +1,120 @@
+@import 'variables';
+
+.banner-section {
+    margin-top: 4rem;
+    .row {
+        padding-left: 15px;
+        padding-right: 15px;
+        .banner-img {
+            position: relative;
+            padding: 0;
+            
+            overflow: hidden;
+            img {
+                width: 100%;
+            }
+            &:hover {
+                .glass-1 {
+                    right: 100%;
+                }
+                .glass-2 {
+                    left: 100%;
+                }
+                .info {
+                    
+                    img {
+                        transform: translateY(0);
+                    }
+                    .contacts {
+                        h3 {
+                            transform: translateY(0);
+                            transition-delay: 0;
+                        }
+                        strong {
+                            transform: translateY(0);
+                            transition-delay: 0;
+                        }
+                    }
+                }
+            }
+            .glass-1 {
+                background: rgba(255,255,255, .5);
+                position: absolute;
+                top:0;
+                left:0;
+                right:50%;
+                bottom: 0;
+                transition: all .3s;
+            }
+            .glass-2 {
+                background: rgba(255,255,255, .5);
+                position: absolute;
+                top:0;
+                left:50%;
+                right:0;
+                bottom: 0;
+                transition: all .3s;
+            }
+            .info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                justify-content: space-around;
+                position: absolute;
+                top: 15px;
+                bottom: 15px;
+                left: 15px;
+                right: 15px;
+                padding: 15px;
+                text-align: center;
+                img {
+                    max-width: 100px;
+                    margin: 0 auto;
+                    transform: translateY(-300px);
+                    transition: all .3s;
+                }
+                
+                h2{
+                    font-family: Intro-Bold, sans-serif;
+                    color: #fff;
+                    font-size: 1.60rem;
+                    text-transform: uppercase;
+                    @media screen and (max-width: 992px) {
+                        font-size: 1rem;
+                    }
+                }
+                .contacts {
+                    display: flex;
+                    align-items: center;
+                    a {
+                        margin-bottom: 1.5rem;
+                    }
+                    h3 {
+                        font-family: Intro-Book, sans-serif;
+                        font-size: 1.3rem;
+                        font-weight: bold;
+                        color: $primary-red;
+                        transform: translateY(300px);
+                        transition: all .3s;
+                        text-transform: uppercase;
+                        @media screen and (max-width: 992px) {
+                            display: none;
+                        }
+                    }
+                    strong {
+                        font-family: Intro-Book, sans-serif;
+                        color: #fff;
+                        font-size: 1.4rem;
+                        transform: translateY(300px);
+                        transition: all .3s;
+                        transition-delay: .1s;
+                        @media screen and (max-width: 992px) {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

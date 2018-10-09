@@ -1,0 +1,169 @@
+.masters-section {
+    margin: 2rem -15px;
+    background-color: #fafafa;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-image: url(../img/background.png);
+    background-size: 100% 100%;
+
+    font-family: GothamProLight, sans-serif;
+    p{
+        text-align: justify;
+        text-indent: 2rem;
+        line-height: 1.3rem;
+    }
+    .header {
+        margin-top: 15px;
+        span.rect:before {
+            content: ' ';
+            position: absolute;
+            z-index: 0;
+            left: 3rem;
+            top: 0;
+            border: 30px solid $primary-red;
+        }
+        h2 {
+            margin-left: 4rem;
+            text-transform: uppercase;
+            font-size: 1.55rem;
+            font-family: Intro-Bold, sans-serif;
+            font-weight: bold;
+            position: relative;
+            z-index: 10;
+            color: #000;
+        }
+        &.mix-blend-mode {
+            span.rect:before{
+                border: 30px solid #000 !important;
+            }
+            h2 {
+                mix-blend-mode: difference !important;
+                color: #fff !important;
+            }
+        }
+    }
+    ul {
+        text-transform: uppercase;
+    }
+
+    #mastersTab {
+        margin-top: -5px;
+        border: none;
+        @media screen and (max-width: 992px){
+            width: 100%;
+            li {
+                display: block;
+                width: 100%;
+            }
+            margin-top: 3rem;
+            text-align: center;
+        }
+        li a{
+            color: #000;
+            border: none;
+            background: transparent;
+            font-family: Intro-Book, sans-serif;
+            &.active {
+                color: $primary-red;
+            }
+        }
+    }
+
+    #mastersTabContent {
+        margin-top: 3rem;
+        overflow: hidden;
+        max-height: 480px;
+    }
+
+    .triple-items-carousel {
+        margin: 0; padding: 0;
+        min-height: 450px;
+        max-height: 480px;
+        overflow: hidden;
+        .carousel-item {
+            margin: 0;
+            padding: 0;
+            min-height: 480px;
+            position: relative;
+            overflow: hidden;
+            &:nth-child(odd){
+                .img-block {
+                    background-color: rgba(0,0,0,.5);
+                }
+            }
+            &:nth-child(even){
+                .img-block {
+                    background-color: rgba($primary-red, .5);
+                }
+            }
+            .img-block {
+                position: relative;
+                overflow: hidden;
+                min-height: 450px;
+                img {
+                    height: 450px;
+                    width: 100%;
+                }
+            }
+            
+            &:hover, &:focus, &:active {
+                a {
+                    transform: translateY(0);
+                }
+                .about {
+                    strong {
+                        a{
+                            color: $primary-red;
+                        }
+                    }
+                }
+            }
+            a {
+                position: absolute;
+                top: 5px;
+                left: 15%;
+                right: 15%;
+                transition: all .3s;
+                transform: translateY(-150%);
+            }
+            .about {
+                position: absolute;
+                bottom: 0;
+                left: 10px;
+                right: 20%;
+                padding: 10px;
+                display: inline-block;
+                background: rgba(0,0,0, .7);
+                color: #fff;
+                text-transform: uppercase;
+                min-height: 7rem;
+                strong {
+                    a{
+                        position: static;
+                        text-decoration: none;
+                        display: block;
+                        color: #fff;
+                        transition: all .3s;
+                        transform: translateY(0);
+                        &:hover {
+                            color: lighten($primary-red, 10);
+                        }
+                    }
+                }
+                span {
+                    font-size: .7rem;
+                    a{
+                        position: static;
+                        color: $primary-red;
+                        text-decoration: none;
+                        &:hover {
+                            color: lighten($primary-red, 10);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
